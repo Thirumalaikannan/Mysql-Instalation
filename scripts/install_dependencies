@@ -15,11 +15,10 @@ sudo yum clean metadata
 
 sudo yum install php php-common php-pear -y
 
-sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip}
+sudo wget https://dev.mysql.com/get/mysql80-community-release-el9-1.noarch.rpm 
 
-sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
-
-sudo yum install mysql-community-server -y
+sudo dnf install mysql80-community-release-el9-1.noarch.rpm -y
+sudo dnf install mysql-community-server -y
 
 sudo systemctl enable mysqld
 
